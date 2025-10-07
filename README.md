@@ -11,11 +11,25 @@ A complete LAMP (Linux, Apache, MySQL, PHP) development environment containerize
 - **Hot-reload** for PHP code changes
 - Isolated and portable configuration
 
+## 📑 Table of Contents
+
+- [Prerequisites](#-prerequisites)
+- [Quick Start](#-quick-start)
+- [Project Structure](#-project-structure)
+- [Usage](#-usage)
+- [Container Management](#-container-management)
+- [Useful Commands](#-useful-commands)
+- [Troubleshooting](#-troubleshooting)
+- [Tech Stack](#-tech-stack)
+- [Security Notice](#-security-notice)
+- [Author](#-author)
+
+___
 ## 🔧 Prerequisites
 
 - [Docker](https://docs.docker.com/get-docker/) (version 20.10+)
 - [Docker Compose](https://docs.docker.com/compose/install/) (version 2.0+)
-
+___
 ## 🚀 Quick Start
 
 ### 1. Build Docker Image
@@ -38,7 +52,7 @@ docker-compose up -d
 |---------|-----|-------------|
 | **Web Application** | http://localhost | Your PHP application |
 | **phpMyAdmin** | http://localhost:8080 | MySQL database management |
-
+___
 ## 📁 Project Structure
 
 ```
@@ -51,7 +65,7 @@ lamp-docker/
 └── mysql_data/             # MySQL persistent volume (auto-generated)
 ```
 
-
+___
 ## 💻 Usage
 
 ### Development
@@ -74,15 +88,13 @@ try {
 ?>
 ```
 
-
-**Note**: Use `db` as host (the service name in docker-compose), not `localhost`.
-
+> ⚠️ **Important Note**: Always use `db` as the host (the service name in docker-compose), NOT `localhost`. ⚠️
 ### phpMyAdmin Access
 
 - URL: http://localhost:8080
 - Username: `root`
 - Password: (leave empty)
-
+___
 ## 🔄 Container Management
 
 ```shell script
@@ -105,7 +117,7 @@ docker-compose logs -f
 docker-compose up -d --build
 ```
 
-
+___
 ## 📝 Useful Commands
 
 ```shell script
@@ -122,7 +134,7 @@ docker-compose exec db mysqldump -uroot database_name > backup.sql
 # Import database
 docker-compose exec -T db mysql -uroot database_name < backup.sql
 ```
-
+___
 
 ## 🐛 Troubleshooting
 
@@ -152,7 +164,7 @@ docker build -t lamp-php-apache .
 docker-compose up -d
 ```
 
-
+___
 ## 🛠️ Tech Stack
 
 - **Docker** 🐳 - Containerization
@@ -160,7 +172,7 @@ docker-compose up -d
 - **PHP** (latest) - Programming language
 - **MySQL 8.1.0** - Database
 - **phpMyAdmin** - Database management interface
-
+___
 ## 🔐 Security Notice
 
 ⚠️ **This configuration is for LOCAL DEVELOPMENT ONLY.**
@@ -170,7 +182,7 @@ Do NOT use in production without:
 - HTTPS/SSL configuration
 - Firewall and network restrictions
 - Regular security updates
-
+___
 ## 👤 Author
 
 **Maniglio Federico**
