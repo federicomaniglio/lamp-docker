@@ -42,7 +42,7 @@ docker build .
 ### 2. Start Containers
 
 ```shell script
-docker-compose up -d
+docker compose up -d
 ```
 
 
