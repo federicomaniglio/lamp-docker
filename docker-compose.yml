@@ -1,0 +1,28 @@
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"                     # Espone Apache sulla porta 80
+    volumes:
+      - ./html:/var/www/html        # Mappa la cartella del tuo progetto
+    # Non dipende più da db, puoi decidere se avviare MySQL
+
+  db:
+    image: mysql:8.1.0
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"   # permette password vuota
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    environment:
+      PMA_HOST: db
