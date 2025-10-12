@@ -60,9 +60,8 @@ lamp-docker/
 ├── docker-compose.yml      # Docker services configuration
 ├── Dockerfile              # Custom PHP + Apache image
 ├── README.md              
-├── html/                   # Web root (mapped to /var/www/html)
-│   └── index.php          
-└── mysql_data/             # MySQL persistent volume (auto-generated)
+└── html/                   # Web root (mapped to /var/www/html)
+    └── index.php          
 ```
 
 ___

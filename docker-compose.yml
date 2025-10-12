@@ -12,7 +12,7 @@ services:
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"   # permette password vuota
     volumes:
-      - ./mysql_data:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
     ports:
       - "3306:3306"
 
@@ -26,3 +26,8 @@ services:
       - db
     environment:
       PMA_HOST: db
+
+
+
+volumes:
+  mysql_data:
