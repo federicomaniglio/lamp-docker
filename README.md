@@ -94,6 +94,15 @@ try {
 - Username: `root`
 - Password: (leave empty)
 ___
+### Optional: Directory Listing Utility
+
+If you need to browse through your project directories, you can download and use this handy directory listing page:
+
+**[Download Directory Listing Index](https://gist.github.com/federicomaniglio/1cc769643f29a68b38651fc01d35ff9a)**
+
+Simply download the file and replace `html/index.php` with it to get an automatic directory browser.
+
+___
 ## 🔄 Container Management
 
 ```shell script
