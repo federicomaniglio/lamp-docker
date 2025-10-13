@@ -87,7 +87,7 @@ try {
 ?>
 ```
 
-> ⚠️ **Important Note**: Always use `db` as the host (the service name in docker-compose), NOT `localhost`. ⚠️
+> ⚠️ **Important Note**: Always use `db` as the host (the service name in docker-compose), NOT `localhost`.
 ### phpMyAdmin Access
 
 - URL: http://localhost:8080
